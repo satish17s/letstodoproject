@@ -1,0 +1,22 @@
+{% extends 'todoapp/base.html' %}
+
+{% block content %}
+
+<div class="container">
+<h3>We all have those days when there are a million things to do, and we don't know how we're going to get it all done. It's easy to become overwhelmed by the vast quantity of tasks that we must do from day to day. so let's organize it with the help of 'LetsTodo!''</h3>
+
+</div>
+
+<ul >
+  <p class="text-center">
+  <li><h4> LetsTodo list doesn’t forget. </h4></li>
+  <li><h4> LetsTodo list helps you set priorities. </h4></li>
+  <li><h4> LetsTodo list lets you coordinate similar tasks. </h4></li>
+  <li><h4> LetsTodo list tracks your progress. </h4></li>
+  <li><h4> LetsTodo list makes it easy to carry-over tasks. </h4></li>
+  </p>
+</ul>
+
+<button name="create" class="buttoncreate create"> <a class=""  href="{% url 'createtodo'  %}">Lets Get Started!</a></button>
+
+{% endblock %}

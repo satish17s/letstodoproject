@@ -1,0 +1,44 @@
+{% extends 'todoapp/base.html' %}
+
+{% block content %}
+
+<h2 >{{ todo.title }}</h2>
+
+
+<h2>{{ error }}</h2>
+
+
+
+<form class="" action=" " method="POST">
+{% csrf_token %}
+{% csrf_token %}
+{{ form.as_p }}
+
+<div class="row">
+<div class="column">
+
+<button type="submit" class="buttonupdate update" name="update">update</button>
+{% csrf_token %}
+</form>
+</div>
+
+<div class="column">
+<form class="" action="{% url 'completetodo' todo.id %}" method="POST">
+{% csrf_token %}
+
+<button type="submit" class="buttoncomplete complete" name="complete">complete</button>
+{% csrf_token %}
+</form>
+</div>
+
+  <div class="column">
+<form class="" action="{% url 'deletetodo' todo.id %}" method="POST">
+{% csrf_token %}
+
+<button type="submit" class="buttondelete delete" name="delete">delete</button>
+{% csrf_token %}
+</form>
+</div>
+</div>
+
+{% endblock %}
