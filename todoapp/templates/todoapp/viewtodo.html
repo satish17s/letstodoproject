@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<h2 >{{ todo.title }}</h2>
+<h2 id="tname">{{ todo.title }}</h2>
 
 
 <h2>{{ error }}</h2>
@@ -17,7 +17,7 @@
 <div class="row">
 <div class="column">
 
-<button type="submit" class="buttonupdate update" name="update">update</button>
+<button type="submit" class="buttonupdate update" name="update">Update</button>
 {% csrf_token %}
 </form>
 </div>
@@ -26,7 +26,7 @@
 <form class="" action="{% url 'completetodo' todo.id %}" method="POST">
 {% csrf_token %}
 
-<button type="submit" class="buttoncomplete complete" name="complete">complete</button>
+<button type="submit" class="buttoncomplete complete" name="complete">Complete</button>
 {% csrf_token %}
 </form>
 </div>
@@ -35,7 +35,7 @@
 <form class="" action="{% url 'deletetodo' todo.id %}" method="POST">
 {% csrf_token %}
 
-<button type="submit" class="buttondelete delete" name="delete">delete</button>
+<button type="submit" class="buttondelete delete" name="delete">Delete</button>
 {% csrf_token %}
 </form>
 </div>
